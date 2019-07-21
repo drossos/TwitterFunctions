@@ -1,6 +1,8 @@
 import tweepy
 import json
 import datetime
+
+# Reading connection strings from the tweet_auth_creds.py file
 import tweet_auth_creds as tac
 
 #initialization
@@ -35,4 +37,4 @@ def save_tweets(usname):
                 out.write("\n")
         
 
-save_tweets("realDonaldTrump")
+# save_tweets("realDonaldTrump")
