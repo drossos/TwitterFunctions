@@ -7,7 +7,12 @@ import numpy as np
 import os
 import time
 
-path_to_file = os.getcwd() +'\Text_generation\dat'+'\tweets.txt'
+#shakspere data
+# path_to_file = tf.keras.utils.get_file( os.getcwd() +'\Text_generation\dat'+'\shakespeare.txt', 'https://storage.googleapis.com/download.tensorflow.org/data/shakespeare.txt')
+
+# Tweet data
+path_to_file = 'data'+'/user_tweets.txt'
+
 
 # Read, then decode for py2 compat.
 text = open(path_to_file, 'rb').read().decode(encoding='utf-8')
@@ -118,7 +123,7 @@ checkpoint_callback=tf.keras.callbacks.ModelCheckpoint(
     save_weights_only=True)
 
 
-EPOCHS=3
+EPOCHS=20
 # uncomment to train model
 history = model.fit(dataset.repeat(), epochs=EPOCHS, steps_per_epoch=steps_per_epoch, callbacks=[checkpoint_callback])
 
@@ -171,4 +176,4 @@ def generate_text(model, start_string):
 
 
 print("~~~~~~~~~~~~~GENERATIVE TEXT~~~~~~~~~~~~~~~")
-print(generate_text(model, start_string=u"ROMEO: "))
+print(generate_text(model, start_string=u"I "))
