@@ -7,7 +7,7 @@ def save_user_info(usname):
     usjson = user._json
     usjson["Following"] = [friend.screen_name for friend in twf.api.get_user(usname).friends()]
 
-    with open('users.json','a') as f:
+    with open('data/users.json','a') as f:
         json.dump(usjson,f)
         f.write("\n")
 
