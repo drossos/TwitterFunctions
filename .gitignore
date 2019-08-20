@@ -6,3 +6,4 @@
 .idea/modules.xml
 .idea/misc.xml
 .idea/libraries/R_User_Library.xml
+tweet_auth_creds.py
