@@ -22,7 +22,6 @@ def graph_network(arr,usNam, G):
 # reads user information pre accumilated from the users.json file
 # used only after information is gathered from user_data_accum.py
 def graph_extended_network(arr,usNam, api):
-    q = queue.Queue()
     colors = []
     G = nx.Graph()
     
